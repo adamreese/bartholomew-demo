@@ -1,0 +1,16 @@
+[bindle]
+name = "bartholomew-demo"
+version = "0.1.0"
+authors = ["Adam Reese"]
+
+[[handler]]
+# Download the Wagi fileserver, and then set this path to point to fileserver.gr.wasm
+name = "fileserver.gr.wasm"
+route = "/static/..."
+files = ["static/*"]
+
+[[handler]]
+# Download the Bartholomew server and then set this path to point to bartholomew.wasm
+name = "bartholomew.wasm"
+route = "/..."
+files = [ "content/*" , "templates/*", "scripts/*", "config/*"]
